@@ -1,0 +1,12 @@
+<h1> Honey I'm Home! </h1>
+<%= link_to "SignUp", new_user_path %>
+
+<%= link_to "Create A Listing", new_post_path %>
+
+<ul>
+  <% if @post %>
+    <% @post.each do |post| %>
+      <li><%= link_to post.title, post %></li>
+    <% end %>
+  <% end %>
+</ul>
